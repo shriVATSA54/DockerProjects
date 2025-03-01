@@ -18,6 +18,7 @@ This project demonstrates how to containerize a **simple To-Do app** using **HTM
 ```sh
 git clone https://github.com/shriVATSA54/DockerProjects.git
 cd DockerProjects
+cd Beginner-Contanerizing Nginx and JS To-DO
 
 2️⃣ **Run Dockerfile **
 docker-compose up --build -d
