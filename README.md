@@ -3,8 +3,7 @@
 This repository contains **Docker projects from beginner to advanced levels**. The goal is to learn and implement various Docker concepts, including:  
 
 - **Containerizing applications**  
-- **Docker Compose**  
-- **Nginx with Docker**  
+- **Docker Compose**    
 - **Multi-container applications**  
 - **Advanced Docker features**  
 
