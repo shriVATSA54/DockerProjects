@@ -13,3 +13,8 @@ This repository contains **Docker projects from beginner to advanced levels**. T
    - HTML, CSS, JavaScript frontend  
    - Nginx as a web server  
    
+2. **Intermediate:Contanerizing Notes-APP**
+   - Uses React JS
+   - Nginx
+   - Django
+The Project covers volume, networks and Docker-compose
