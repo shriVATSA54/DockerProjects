@@ -14,22 +14,13 @@ This is a simple notes app built with React and Django.
 ## Installation
 1. Clone the repository
 ```
-git clone https://github.com/LondheShubham153/django-notes-app.git
+git clone https://github.com/shriVATSA54/DockerProjects.git
+cd DockerProjects
+cd Intermediate-django-Notes-app
 ```
 
-2. Build the app
+2. Build the app by running the Compose-yaml file
 ```
-docker build -t notes-app .
+docker-compose up
+
 ```
-
-3. Run the app
-```
-docker run -d -p 8000:8000 notes-app:latest
-```
-
-## Nginx
-
-Install Nginx reverse proxy to make this application available
-
-`sudo apt-get update`
-`sudo apt install nginx`
