@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Docker Practice App</title>
+</head>
+<body>
+  <h1>Message Board</h1>
+  <input id="input" placeholder="Type message...">
+  <button onclick="addMessage()">Add</button>
+
+  <h2>Messages:</h2>
+  <ul id="list"></ul>
+  <script>
+    const backendUrl = "http://localhost:3000/messages"; // For browser
+    async function loadMessages() {
+      try {
+        const res = await fetch(backendUrl);
+        const messages = await res.json();
+        const list = document.getElementById("list");
+        list.innerHTML = "";
+        messages.forEach(m => {
+          const li = document.createElement("li");
+          li.innerText = m.text;
+          list.appendChild(li);
+        });
+      } catch (err) {
+        console.error("Error loading messages:", err);
+      }
+    }
+  
+    async function addMessage() {
+      const input = document.getElementById("input");
+      const message = input.value.trim();
+      if (!message) return;
+  
+      try {
+        await fetch(backendUrl, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ text: message })
+        });
+        input.value = "";
+        loadMessages();
+      } catch (err) {
+        console.error("Error sending message:", err);
+      }
+    }
+  
+    loadMessages();
+    setInterval(loadMessages, 5000);
+  </script>
+</body>
+</html>
