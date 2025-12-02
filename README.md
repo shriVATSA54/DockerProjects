@@ -18,7 +18,7 @@ This repository contains **Docker projects from beginner to advanced levels**. T
    - Nginx
    - Django
 The Project covers volume, networks and Docker-compose
-3 **Docker Message Board App**
+3. **Docker Message Board App**
 A simple full-stack message board application using Node.js, Express, MongoDB, and an Nginx frontend, all running via Docker Compose.
 
 Users can submit messages from the frontend, which are stored in MongoDB and displayed in real time.
